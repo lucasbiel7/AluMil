@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" fx:id="apPrincipal" prefHeight="511.0" prefWidth="581.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.AluMil.view.NovoDispositivoController">
+    <stylesheets>
+        <URL value="@estilo.css" />
+    </stylesheets>
+   <children>
+      <Button fx:id="btAdicionar" defaultButton="true" layoutX="129.0" layoutY="396.0" onAction="#btAdicionarActionEvent" prefHeight="45.0" prefWidth="146.0" text="Adicionar" AnchorPane.bottomAnchor="15.0">
+         <graphic>
+            <ImageView fitHeight="65.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/aDICIONAR.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btCancelar" cancelButton="true" layoutX="368.0" layoutY="397.0" onAction="#btCancelarActionEvent" text="Cancelar" AnchorPane.bottomAnchor="15.0">
+         <graphic>
+            <ImageView fitHeight="65.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/Sign_Close_Icon_64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <GridPane hgap="5.0" layoutX="62.0" layoutY="113.0" prefHeight="312.0" prefWidth="457.0" vgap="5.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="216.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.0" minWidth="10.0" prefWidth="336.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="141.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Nome do equipamento" />
+            <Label text="Imagem" GridPane.rowIndex="3" />
+            <TextField fx:id="tfNomeMaquina" GridPane.columnIndex="1" />
+            <Spinner fx:id="spNumeroPecas" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Spinner fx:id="spPeriodicidade" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fx:id="ivFoto" fitHeight="132.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <HBox prefHeight="10.0" prefWidth="289.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btAdicionarFotoActionEvent" text="Adicionar" />
+                  <Button mnemonicParsing="false" onAction="#btRemoverFotoActionEvent" text="Remover" />
+               </children>
+            </HBox>
+            <Label text="Nº de peças" GridPane.rowIndex="1" />
+            <Label text="Periodicidade" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Label fx:id="lbTitle" layoutX="278.0" layoutY="14.0" styleClass="title" text="Equipamento" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Label fx:id="lbTitle1" layoutX="242.0" layoutY="44.0" styleClass="title" text="Informe os dados do novo Dispositivo" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+   </children>
+</AnchorPane>

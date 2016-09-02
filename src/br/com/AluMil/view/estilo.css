@@ -1,0 +1,18 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.title{
+    -fx-font-size: 20px;
+    -fx-alignment: CENTER;
+}
+.sub-title{
+    -fx-font-size: 18px;
+    -fx-alignment: CENTER;
+    -fx-background-color:  #cccccc;
+}
+

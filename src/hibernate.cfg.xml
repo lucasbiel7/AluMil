@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/alumil?zeroDateTimeBehavior=convertToNull</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">OC2016</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
+        <property name="hibernate.c3p0.timeout">3000</property>
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">15</property>
+        <property name="hibernate.c3p0.idle_test_period">15</property>
+        <property name="hibernate.c3p0.acquire_increment">10</property>
+        
+        <mapping class="br.com.AluMil.model.entity.Usuario"/>
+        <mapping class="br.com.AluMil.model.entity.Maquina"/>
+        <mapping class="br.com.AluMil.model.entity.Dispositivo"/>
+        <mapping class="br.com.AluMil.model.entity.Ciclo"/>
+        <mapping class="br.com.AluMil.model.entity.Manutencao"/>
+        <mapping class="br.com.AluMil.model.entity.Ocorrencia"/>
+        <mapping class="br.com.AluMil.model.entity.CheckList"/>
+        <mapping class="br.com.AluMil.model.entity.Operacao"/>
+        <mapping class="br.com.AluMil.model.entity.OrdemExecucao"/>
+        <mapping class="br.com.AluMil.model.entity.OperacaoOrdemExecucao"/>
+        <mapping class="br.com.AluMil.model.entity.OperacaoOrdemExecucaoDia"/>
+        <mapping class="br.com.AluMil.model.entity.HorarioAcesso"/>
+        <mapping class="br.com.AluMil.model.entity.RelatorioGerencial"/>
+        <mapping class="br.com.AluMil.model.entity.RelatorioMaquina"/>
+    </session-factory>
+</hibernate-configuration>

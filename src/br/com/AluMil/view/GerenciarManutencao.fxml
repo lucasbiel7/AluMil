@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" fx:id="apPrincipal" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="br.com.AluMil.view.GerenciarManutencaoController">
+    <stylesheets>
+        <URL value="@estilo.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="lbTitle" layoutX="286.0" layoutY="14.0" prefHeight="41.0" prefWidth="600.0" styleClass="sub-title" text="Label" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label fx:id="lbPeriodicidade" layoutX="15.0" layoutY="56.0" styleClass="title" text="Label" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <GridPane hgap="5.0" layoutX="96.0" layoutY="111.0" prefHeight="65.0" prefWidth="455.0" vgap="5.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="49.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Ciclo" />
+            <ComboBox fx:id="cbCiclo" onAction="#cbCicloActionEvent" prefWidth="150.0" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#btAdicionarActionEvent" text="Adicionar" GridPane.columnIndex="2" />
+            <Button mnemonicParsing="false" onAction="#btExcluirActionEvent" text="Excluir" GridPane.columnIndex="3" />
+            <Button mnemonicParsing="false" onAction="#btOcorrenciasActionEvent" text="Ocorrências" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Rodada:" GridPane.columnIndex="4" />
+            <Label text="Acumulado" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label fx:id="lbRodada" GridPane.columnIndex="5" />
+            <Label fx:id="lbAcumulado" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button layoutY="86.0" mnemonicParsing="false" onAction="#btVoltarActionEvent" prefHeight="30.0" prefWidth="66.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="86.0">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/VOLTAR.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ScrollPane layoutX="15.0" layoutY="176.0" prefHeight="196.0" prefWidth="570.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="189.0">
+         <content>
+            <GridPane fx:id="gpManutencao" hgap="5.0" vgap="5.0">
+              <rowConstraints>
+                <RowConstraints minHeight="0.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

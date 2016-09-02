@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="apPrincipal" prefHeight="400.0" prefWidth="627.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="br.com.AluMil.view.GerenciarOperacaoOrdemExecucaoController">
+    <stylesheets>
+        <URL value="@estilo.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="15.0" layoutY="15.0" spacing="20.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <TableView fx:id="tvOrdemExecucao" prefHeight="500000.0" prefWidth="200.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="Ordens de execução">
+                     <columns>
+                        <TableColumn fx:id="tcId" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="tcDescricao" prefWidth="75.0" text="Descrição manutenção" />
+                        <TableColumn fx:id="tcPeriodicidade" prefWidth="75.0" text="ID Periodicidade" />
+                        <TableColumn fx:id="tcInicio" prefWidth="75.0" text="Data Inicial" />
+                        <TableColumn fx:id="tcFim" prefWidth="75.0" text="Data Final" />
+                     </columns>
+                  </TableColumn>
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TableView fx:id="tvOperacao" prefHeight="500000.0" prefWidth="597.0">
+              <columns>
+                  <TableColumn prefWidth="75.0" text="Operações disponíveis para CheckList">
+                     <columns>
+                      <TableColumn fx:id="tcHabilitado" prefWidth="75.0" text="Habilitado" />
+                      <TableColumn fx:id="tcOperacao" prefWidth="75.0" text="Operações" />
+                     </columns>
+                  </TableColumn>
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

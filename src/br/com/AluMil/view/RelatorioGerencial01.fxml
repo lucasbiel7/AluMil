@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.AluMil.view.RelatorioGerencial01Controller">
+    <stylesheets>
+        <URL value="@estilo.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tvRelatorioGerencial" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+        <columns>
+          <TableColumn fx:id="tcData" prefWidth="75.0" text="Data" />
+            <TableColumn fx:id="tcGrandTotal" prefWidth="75.0" text="Grand total" />
+          <TableColumn fx:id="tcInfo01" prefWidth="75.0" text="INFO_01" />
+            <TableColumn fx:id="tcInfo02" prefWidth="75.0" text="INFO_02" />
+            <TableColumn fx:id="tcInfo03" prefWidth="75.0" text="INFO_03" />
+            <TableColumn fx:id="tcInfo04" prefWidth="75.0" text="INFO_04" />
+            <TableColumn fx:id="tcInfo05" prefWidth="75.0" text="INFO_05" />
+            <TableColumn fx:id="tcInfo06" prefWidth="75.0" text="INFO_06" />
+            <TableColumn fx:id="tcInfo07" prefWidth="75.0" text="INFO_07" />
+            <TableColumn fx:id="tcInfo08" prefWidth="75.0" text="INFO_08" />
+            <TableColumn fx:id="tcInfo09" prefWidth="75.0" text="INFO_09" />
+            <TableColumn fx:id="tcInfo10" prefWidth="75.0" text="INFO_10" />
+            <TableColumn fx:id="tcInfo11" prefWidth="75.0" text="INFO_11" />
+            <TableColumn fx:id="tcInfo12" prefWidth="75.0" text="INFO_12" />
+            <TableColumn fx:id="tcInfo13" prefWidth="75.0" text="INFO_13" />
+            <TableColumn fx:id="tcInfo14" prefWidth="75.0" text="INFO_14" />
+            <TableColumn fx:id="tcInfo15" prefWidth="75.0" text="INFO_15" />
+            <TableColumn fx:id="tcInfo16" prefWidth="75.0" text="INFO_16" />
+            <TableColumn fx:id="tcInfo17" prefWidth="75.0" text="INFO_17" />
+            <TableColumn fx:id="tcInfo18" prefWidth="75.0" text="INFO_18" />
+            <TableColumn fx:id="tcInfo19" prefWidth="75.0" text="INFO_19" />
+            <TableColumn fx:id="tcInfo20" prefWidth="75.0" text="INFO_20" />
+            <TableColumn fx:id="tcInfo21" prefWidth="75.0" text="INFO_21" />
+            <TableColumn fx:id="tcInfo22" prefWidth="75.0" text="INFO_22" />
+            <TableColumn fx:id="tcInfo23" prefWidth="75.0" text="INFO_23" />
+            <TableColumn fx:id="tcInfo24" prefWidth="75.0" text="INFO_24" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>
